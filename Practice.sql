@@ -1,6 +1,8 @@
+# shipments (sales) where amounts are > 2,000 and boxes are <100.
 select * from sales
 where amount>2000 and Boxes<100;
 
+# How many shipments (sales) each of the sales persons had in the month of January 2022?
 select p.Salesperson, count(boxes) as 'Shipment Count'
 from sales s
 join people p on s.spid = p.spid
